@@ -1,5 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Button, buttonVariants } from "@/components/ui/button";
+import Link from "next/link";
+import { Input } from "@/components/ui/input";
 
 function ValueInput({
   label,
@@ -17,11 +20,11 @@ function ValueInput({
   onChange?: (value: number) => void;
 }) {
   return (
-    <div className="flex flex-row items-center justify-center gap-4 w-full">
+    <div className="flex flex-row items-center justify-center gap-4 w-full h-full">
       <h3 className="text-xl">{label}</h3>
-      <input
-        className={`w-48 px-3 text-2xl text-center text-gray-700 border rounded-lg focus:outline-none focus:shadow-outline${
-          disabled ? " bg-gray-400 text-white" : ""
+      <Input
+        className={`w-48 px-3 text-xl text-center border rounded-lg focus:outline-none focus:shadow-outline ${
+          disabled ? "bg-gray-200 text-gray-700" : "text-gray-700"
         }}`}
         type="number"
         placeholder={label}
@@ -70,14 +73,15 @@ export default function Home() {
       <div className="flex flex-col gap-4 items-center justify-around max-w-4xl mt-12 sm:w-full">
         <div className="flex flex-row items-center justify-center gap-4 w-full">
           <h3 className="text-xl">Intermediate Calculations</h3>
-          <button
-            className="text-xl p-3 bg-gray-50 text-slate-700 rounded-lg focus:outline-none focus:shadow-outline w-24"
+          <Button
+            // className="text-xl p-3 bg-gray-50 text-slate-700 rounded-lg focus:outline-none focus:shadow-outline w-24"
+            variant="outline"
             onClick={() =>
               setShowIntermediateCalculations(!showIntermediateCalculations)
             }
           >
             {showIntermediateCalculations ? "Hide" : "Show"}{" "}
-          </button>
+          </Button>
         </div>
         <ValueInput label="Bars" value={bars} onChange={setBars} />
         <ValueInput label="Beats" value={beats} onChange={setBeats} />
@@ -117,6 +121,18 @@ export default function Home() {
           disabled
           value={tapeLength}
         />
+      </div>
+      <div className="absolute bottom-8 right-8">
+        <Link
+          href="https://www.buymeacoffee.com/henryives"
+          className={buttonVariants({
+            variant: "outline",
+            size: "lg",
+            className: "text-xl py-6 shadow-sm",
+          })}
+        >
+          Support me :)
+        </Link>
       </div>
     </main>
   );
