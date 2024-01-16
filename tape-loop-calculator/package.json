@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:pages": "npx @cloudflare/next-on-pages && npx wrangler pages dev .vercel/output/static --compatibility-flag=nodejs_compat",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "typescript": "^5",
+    "@cloudflare/next-on-pages": "beta",
+    "eslint-plugin-next-on-pages": "beta",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
