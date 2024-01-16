@@ -122,7 +122,7 @@ export default function Home() {
           value={tapeLength}
         />
       </div>
-      <div className="absolute bottom-8 right-8">
+      <div className="fixed bottom-8 right-8">
         <Link
           href="https://www.buymeacoffee.com/henryives"
           className={buttonVariants({
