@@ -70,7 +70,7 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
       <title>Tape Loop Calculator</title>
       <h1 className="text-6xl font-bold pt-8">Tape Loop Calculator</h1>
-      <div className="flex flex-col gap-4 items-center justify-around max-w-4xl mt-12 sm:w-full">
+      <div className="flex flex-col gap-4 items-center justify-around max-w-4xl mt-12 pb-24 sm:w-full">
         <div className="flex flex-row items-center justify-center gap-4 w-full">
           <h3 className="text-xl">Intermediate Calculations</h3>
           <Button
