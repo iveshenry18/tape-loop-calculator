@@ -128,8 +128,8 @@ export default function Home() {
           href="https://www.buymeacoffee.com/henryives"
           className={buttonVariants({
             variant: "outline",
-            size: "lg",
-            className: "text-xl py-6 px-2 shadow-sm",
+            size: "icon",
+            className: "h-12 w-12 p-3 shadow-sm",
           })}
         >
           <CoffeeLogo />
