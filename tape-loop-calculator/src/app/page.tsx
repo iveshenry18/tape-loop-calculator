@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { CoffeeLogo } from "@/components/ui/coffee_logo";
 
 function ValueInput({
   label,
@@ -128,10 +129,10 @@ export default function Home() {
           className={buttonVariants({
             variant: "outline",
             size: "lg",
-            className: "text-xl py-6 shadow-sm",
+            className: "text-xl py-6 px-2 shadow-sm",
           })}
         >
-          Support me :)
+          <CoffeeLogo />
         </Link>
       </div>
     </main>
